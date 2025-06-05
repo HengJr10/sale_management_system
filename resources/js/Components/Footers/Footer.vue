@@ -1,7 +1,7 @@
 <template>
-    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+    <footer class="relative pt-8 pb-6 bg-blueGray-200">
         <div
-            class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+            class="absolute top-0 left-0 right-0 bottom-auto w-full h-20 -mt-20 overflow-hidden pointer-events-none"
             style="transform: translateZ(0);"
         >
             <svg
@@ -9,64 +9,64 @@
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
                 version="1.1"
-                viewBox="0 0 2560 100"
+                viewBox="0 0 2560 100" 
                 x="0"
                 y="0"
             >
                 <polygon
-                    class="text-blueGray-200 fill-current"
+                    class="fill-current text-blueGray-200"
                     points="2560 0 2560 100 0 100"
                 ></polygon>
             </svg>
         </div>
-        <div class="container mx-auto px-4">
+        <div class="container px-4 mx-auto">
             <div class="flex flex-wrap text-center lg:text-left">
-                <div class="w-full lg:w-6/12 px-4">
+                <div class="w-full px-4 lg:w-6/12">
                     <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
-                    <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                    <h5 class="mt-0 mb-2 text-lg text-blueGray-600">
                         Find me on any of these platforms, I respond 1-2 business days.
                     </h5>
-                    <div class="mt-6 lg:mb-0 mb-6">
+                    <div class="mt-6 mb-6 lg:mb-0">
 <!--                        <button-->
-<!--                            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"-->
+<!--                            class="items-center justify-center w-10 h-10 mr-2 font-normal bg-white rounded-full shadow-lg outline-none text-lightBlue-400 align-center focus:outline-none"-->
 <!--                            type="button"-->
 <!--                        >-->
 <!--                            <i class="fab fa-twitter"></i>-->
 <!--                        </button>-->
 <!--                        <button-->
-<!--                            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"-->
+<!--                            class="items-center justify-center w-10 h-10 mr-2 font-normal bg-white rounded-full shadow-lg outline-none text-lightBlue-600 align-center focus:outline-none"-->
 <!--                            type="button"-->
 <!--                        >-->
 <!--                            <i class="fab fa-facebook-square"></i>-->
 <!--                        </button>-->
                         <button
-                            class="bg-white text-blue-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="items-center justify-center w-10 h-10 mr-2 font-normal text-blue-500 bg-white rounded-full shadow-lg outline-none align-center focus:outline-none"
                             type="button"
-                            onclick="window.open('https://www.linkedin.com/in/mamun724682', '_blank')"
+                            onclick="window.open('https://https://www.linkedin.com/in/ten-sokheng-255014369/', '_blank')"
                         >
                             <i class="fab fa-linkedin"></i>
                         </button>
                         <button
-                            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                            class="items-center justify-center w-10 h-10 mr-2 font-normal bg-white rounded-full shadow-lg outline-none text-blueGray-800 align-center focus:outline-none"
                             type="button"
-                            onclick="window.open('https://github.com/mamun724682', '_blank')"
+                               onclick="window.open('https://github.com/HengJr10', '_blank')"
                         >
                             <i class="fab fa-github"></i>
                         </button>
                     </div>
                 </div>
-                <div class="w-full lg:w-6/12 px-4">
-                    <div class="flex flex-wrap items-top mb-6">
-                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <div class="w-full px-4 lg:w-6/12">
+                    <div class="flex flex-wrap mb-6 items-top">
+                        <div class="w-full px-4 ml-auto lg:w-4/12">
               <span
-                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  class="block mb-2 text-sm font-semibold uppercase text-blueGray-500"
               >
                 Useful Links
               </span>
                             <ul class="list-unstyled">
                                 <li>
                                     <a
-                                        class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
                                         href="#"
                                     >
                                         About Us
@@ -74,7 +74,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
                                         href="#"
                                     >
                                         Blog
@@ -82,7 +82,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
                                         href="#"
                                     >
                                         Github
@@ -90,7 +90,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800"
                                         href="#"
                                     >
                                         Free Products
@@ -98,22 +98,22 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-4/12 px-4">
+                        <div class="w-full px-4 lg:w-4/12">
               <span
-                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  class="block mb-2 text-sm font-semibold uppercase text-blueGray-500"
               >
                 Other Resources
               </span>
                             <ul class="list-unstyled">
                                 <li>
                                     <Link :href="route('login')"
-                                          class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">
+                                          class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800">
                                         Login
                                     </Link>
                                 </li>
                                 <li>
                                     <Link :href="route('register')"
-                                          class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">
+                                          class="block pb-2 text-sm font-semibold text-blueGray-600 hover:text-blueGray-800">
                                         Create new account
                                     </Link>
                                 </li>
@@ -124,10 +124,10 @@
             </div>
             <hr class="my-6 border-blueGray-300"/>
             <div
-                class="flex flex-wrap items-center md:justify-between justify-center"
+                class="flex flex-wrap items-center justify-center md:justify-between"
             >
-                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                    <div class="text-sm text-blueGray-500 font-semibold py-1">
+                <div class="w-full px-4 mx-auto text-center md:w-4/12">
+                    <div class="py-1 text-sm font-semibold text-blueGray-500">
                         Copyright © {{ date }}
                     </div>
                 </div>

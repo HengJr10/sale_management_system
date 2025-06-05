@@ -24,8 +24,8 @@ import {Notification, Notivue, pastelTheme} from "notivue";
             </AdminNavbar>
 
             <!-- Header -->
-            <div class="relative bg-emerald-600 md:pt-32 pb-32 pt-12">
-                <div class="px-4 md:px-10 mx-auto w-full">
+            <div class="relative pt-12 pb-32 bg-sky-950 md:pt-32">
+                <div class="w-full px-4 mx-auto md:px-10">
                     <div>
                         <!-- Card stats -->
                         <slot name="headerState" />
@@ -33,7 +33,7 @@ import {Notification, Notivue, pastelTheme} from "notivue";
                 </div>
             </div>
 
-            <div class="px-4 md:px-10 mx-auto w-full -m-24">
+            <div class="w-full px-4 mx-auto -m-24 md:px-10">
 
                 <slot/>
 

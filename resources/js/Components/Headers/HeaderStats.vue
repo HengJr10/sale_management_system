@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-wrap">
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full px-4 lg:w-6/12 xl:w-3/12">
             <card-stats
                 statSubtitle="ORDERS"
                 :statTitle="total_orders.selected"
@@ -12,7 +12,7 @@
                 statIconColor="bg-red-500"
             />
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full px-4 lg:w-6/12 xl:w-3/12">
             <card-stats
                 statSubtitle="PROFIT"
                 :statTitle="total_profit.selected"
@@ -24,7 +24,7 @@
                 statIconColor="bg-orange-500"
             />
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full px-4 lg:w-6/12 xl:w-3/12">
             <card-stats
                 statSubtitle="LOSS"
                 :statTitle="total_loss.selected"
@@ -36,7 +36,7 @@
                 statIconColor="bg-pink-500"
             />
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full px-4 lg:w-6/12 xl:w-3/12">
             <card-stats
                 statSubtitle="EXPENSES"
                 :statTitle="total_expense.selected"

@@ -28,16 +28,16 @@ defineProps({
         </template>
 
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-8/12 px-4">
+            <div class="w-full px-4 lg:w-8/12">
                 <div
-                    class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
+                    class="relative flex flex-col w-full min-w-0 mb-6 break-words border-0 rounded-lg shadow-lg bg-blueGray-100"
                 >
-                    <div class="rounded-t bg-white mb-0 px-6 py-6">
-                        <div class="text-center flex justify-between">
-                            <h6 class="text-blueGray-700 text-xl font-bold">My account</h6>
+                    <div class="px-6 py-6 mb-0 bg-white rounded-t">
+                        <div class="flex justify-between text-center">
+                            <h6 class="text-xl font-bold text-blueGray-700">My account</h6>
                         </div>
                     </div>
-                    <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+                    <div class="flex-auto px-4 py-10 pt-0 lg:px-10">
                         <UpdateSettingsForm
                             :settings="settings"
                         />
@@ -55,7 +55,7 @@ defineProps({
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-4/12 px-4">
+            <div class="w-full px-4 lg:w-4/12">
                 <CardProfile/>
             </div>
         </div>

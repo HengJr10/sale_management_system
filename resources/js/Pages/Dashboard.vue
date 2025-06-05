@@ -47,7 +47,7 @@ watch(() => form.date, async (newDateRange, oldDateRange) => {
                 type="month"
                 placeholder="Select Month"
                 v-model="form.date"
-                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+                class="relative w-full px-3 py-3 pl-10 text-sm bg-white border-0 rounded shadow outline-none placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
             />
         </template>
 
@@ -62,22 +62,22 @@ watch(() => form.date, async (newDateRange, oldDateRange) => {
 
         <div>
             <div class="flex flex-wrap">
-                <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+                <div class="w-full px-4 mb-12 xl:w-8/12 xl:mb-0">
                     <CardLineChart
                         :profit_line_chart="profit_line_chart"
                     />
                 </div>
-                <div class="w-full xl:w-4/12 px-4">
+                <div class="w-full px-4 xl:w-4/12">
                     <CardBarChart
                         :orders_bar_chart="orders_bar_chart"
                     />
                 </div>
             </div>
 <!--            <div class="flex flex-wrap mt-4">-->
-<!--                <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">-->
+<!--                <div class="w-full px-4 mb-12 xl:w-8/12 xl:mb-0">-->
 <!--                    <CardPageVisits/>-->
 <!--                </div>-->
-<!--                <div class="w-full xl:w-4/12 px-4">-->
+<!--                <div class="w-full px-4 xl:w-4/12">-->
 <!--                    <CardSocialTraffic/>-->
 <!--                </div>-->
 <!--            </div>-->

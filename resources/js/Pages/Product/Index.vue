@@ -73,7 +73,7 @@ const closeModal = () => {
                     :tableHeads="tableHeads"
                 >
                     <template #cardHeader>
-                        <div class="flex justify-between items-center">
+                        <div class="flex items-center justify-between">
                             <h4 class="text-2xl">Apply filters({{products.total}})</h4>
                             <Button
                                 :href="route('products.create')"
@@ -88,10 +88,10 @@ const closeModal = () => {
                         <TableData>
                             {{ (products.current_page * products.per_page) - (products.per_page - (index + 1)) }}
                         </TableData>
-                        <TableData class="text-left flex items-center" :title="product.name">
+                        <TableData class="flex items-center text-left" :title="product.name">
                             <img
                                 :src="product.photo"
-                                class="h-12 w-12 bg-white rounded-full border"
+                                class="w-12 h-12 bg-white border rounded-full"
                                 alt="Inventory management system"
                             />
                             <span class="ml-3 font-bold text-blueGray-600">{{ truncateString(product.name, 15) }}</span>
@@ -102,12 +102,12 @@ const closeModal = () => {
                         <TableData :title="product.supplier?.name">{{ truncateString(product.supplier?.name ?? '-') }}</TableData>
                         <TableData>
                             {{ numberFormat(product.quantity) }} {{ product.unit_type?.symbol }}
-                            <span v-if="product.quantity > 0 && product.quantity < 10" class="text-xs font-semibold inline-block py-1 px-2 rounded text-amber-600 bg-amber-200">Low Stock</span>
-                            <span v-if="product.quantity < 1" class="text-xs font-semibold inline-block py-1 px-2 rounded text-red-600 bg-red-200">Stock Out</span>
+                            <span v-if="product.quantity > 0 && product.quantity < 10" class="inline-block px-2 py-1 text-xs font-semibold rounded text-amber-600 bg-amber-200">Low Stock</span>
+                            <span v-if="product.quantity < 1" class="inline-block px-2 py-1 text-xs font-semibold text-red-600 bg-red-200 rounded">Stock Out</span>
                         </TableData>
                         <TableData>
-                            <span v-if="product.status === 'active'" class="text-xs font-semibold inline-block py-1 px-2 rounded text-emerald-600 bg-emerald-200">Active</span>
-                            <span v-else class="text-xs font-semibold inline-block py-1 px-2 rounded text-red-600 bg-red-200">Inactive</span>
+                            <span v-if="product.status === 'active'" class="inline-block px-2 py-1 text-xs font-semibold rounded text-emerald-600 bg-emerald-200">Active</span>
+                            <span v-else class="inline-block px-2 py-1 text-xs font-semibold text-red-600 bg-red-200 rounded">Inactive</span>
                         </TableData>
                         <TableData>
                             <Button

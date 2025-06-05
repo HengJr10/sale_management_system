@@ -120,7 +120,7 @@ const closeModal = () => {
                     :tableHeads="tableHeads"
                 >
                     <template #cardHeader>
-                        <div class="flex justify-between items-center">
+                        <div class="flex items-center justify-between">
                             <h4 class="text-2xl">Apply filters({{customers.total}})</h4>
                             <Button @click="createCustomerModal">Create Customer</Button>
                         </div>
@@ -130,10 +130,10 @@ const closeModal = () => {
                         <TableData>
                             {{ (customers.current_page * customers.per_page) - (customers.per_page - (index + 1)) }}
                         </TableData>
-                        <TableData class="text-left flex items-center">
+                        <TableData class="flex items-center text-left">
                             <img
                                 :src="customer.photo"
-                                class="h-12 w-12 bg-white rounded-full border"
+                                class="w-12 h-12 bg-white border rounded-full"
                                 alt="Inventory management system"
                             />
                             <span class="ml-3 font-bold text-blueGray-600">{{ customer.name }}</span>
@@ -198,7 +198,7 @@ const closeModal = () => {
                 </div>
                 <div class="flex flex-col">
                     <label
-                        class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-emerald-600">
+                        class="flex flex-col items-center w-64 px-4 py-6 tracking-wide uppercase bg-white border rounded-lg shadow-lg cursor-pointer text-blue border-blue hover:bg-blue hover:text-emerald-600">
                         <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path
                                 d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"/>
@@ -217,14 +217,14 @@ const closeModal = () => {
                     <InputError :message="form.errors.photo"/>
                 </div>
                 <div class="flex flex-col">
-                    <label for="address" class="text-stone-600 text-sm font-medium">Address</label>
+                    <label for="address" class="text-sm font-medium text-stone-600">Address</label>
                     <textarea
                         id="address"
                         v-model="form.address"
                         type="text"
                         rows="3"
                         placeholder="Enter address"
-                        class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                        class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                     ></textarea>
                     <InputError :message="form.errors.address"/>
                 </div>
@@ -273,7 +273,7 @@ const closeModal = () => {
                 </div>
                 <div class="flex flex-col">
                     <label
-                        class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-emerald-600">
+                        class="flex flex-col items-center w-64 px-4 py-6 tracking-wide uppercase bg-white border rounded-lg shadow-lg cursor-pointer text-blue border-blue hover:bg-blue hover:text-emerald-600">
                         <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path
                                 d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z"/>
@@ -292,14 +292,14 @@ const closeModal = () => {
                     <InputError :message="form.errors.photo"/>
                 </div>
                 <div class="flex flex-col">
-                    <label for="address" class="text-stone-600 text-sm font-medium">Address</label>
+                    <label for="address" class="text-sm font-medium text-stone-600">Address</label>
                     <textarea
                         id="address"
                         v-model="form.address"
                         type="text"
                         rows="3"
                         placeholder="Enter address"
-                        class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                        class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                     ></textarea>
                     <InputError :message="form.errors.address"/>
                 </div>

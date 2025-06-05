@@ -37,29 +37,29 @@ const submit = () => {
     <AuthLayout>
         <Head :title="pageTitle"/>
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+        <div v-if="status" class="mb-4 text-sm font-medium text-green-600">
             {{ status }}
         </div>
 
-        <div class="container mx-auto px-4 h-full">
-            <div class="flex content-center items-center justify-center h-full">
-                <div class="w-full lg:w-4/12 px-4">
+        <div class="container h-full px-4 mx-auto">
+            <div class="flex items-center content-center justify-center h-full">
+                <div class="w-full px-4 lg:w-4/12">
                     <div
-                        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0"
+                        class="relative flex flex-col w-full min-w-0 mb-6 break-words border-0 rounded-lg shadow-lg bg-blueGray-200"
                     >
-                        <div class="rounded-t mb-0 px-6 py-6">
-                            <div class="text-center mb-3">
-                                <h6 class="text-blueGray-500 text-sm font-bold">
+                        <div class="px-6 py-6 mb-0 rounded-t">
+                            <div class="mb-3 text-center">
+                                <h6 class="text-sm font-bold text-blueGray-500">
                                     Sign in with credentials
                                 </h6>
                             </div>
                             <hr class="mt-6 border-b-1 border-blueGray-300"/>
                         </div>
-                        <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+                        <div class="flex-auto px-4 py-10 pt-0 lg:px-10">
                             <form @submit.prevent="submit">
                                 <div class="relative w-full mb-3">
                                     <label
-                                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                        class="block mb-2 text-xs font-bold uppercase text-blueGray-600"
                                         for="email"
                                     >
                                         Email
@@ -70,7 +70,7 @@ const submit = () => {
                                         v-model="form.email"
                                         required
                                         autofocus
-                                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                        class="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                                         placeholder="Email"
                                     />
                                     <InputError :message="form.errors.email"/>
@@ -78,7 +78,7 @@ const submit = () => {
 
                                 <div class="relative w-full mb-3">
                                     <label
-                                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                        class="block mb-2 text-xs font-bold uppercase text-blueGray-600"
                                         for="password"
                                     >
                                         Password
@@ -86,7 +86,7 @@ const submit = () => {
                                     <input
                                         id="password"
                                         type="password"
-                                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                        class="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                                         placeholder="Password"
                                         v-model="form.password"
                                         required
@@ -99,7 +99,7 @@ const submit = () => {
                                         <Checkbox
                                             name="remember"
                                             v-model:checked="form.remember"
-                                            class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
+                                            class="w-5 h-5 ml-1 transition-all duration-150 ease-linear border-0 rounded form-checkbox text-blueGray-700"
                                         />
                                         <span class="ml-2 text-sm font-semibold text-blueGray-600">
                                             Remember me
@@ -107,9 +107,9 @@ const submit = () => {
                                     </label>
                                 </div>
 
-                                <div class="text-center mt-6">
+                                <div class="mt-6 text-center">
                                     <SubmitButton
-                                        class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                                        class="w-full px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-blueGray-800 active:bg-blueGray-600 hover:shadow-lg focus:outline-none"
                                         :processing="form.processing"
                                     >
                                         Sign In
@@ -118,7 +118,7 @@ const submit = () => {
                             </form>
                         </div>
                     </div>
-                    <div class="flex flex-wrap mt-6 relative">
+                    <div class="relative flex flex-wrap mt-6">
                         <div class="w-1/2">
                             <Link
                                 v-if="canResetPassword"
