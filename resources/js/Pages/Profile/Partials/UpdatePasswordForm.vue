@@ -32,16 +32,16 @@ const updatePassword = () => {
 </script>
 
 <template>
-    <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
+    <h6 class="mt-3 mb-6 text-sm font-bold uppercase text-blueGray-400">
         Update Password
     </h6>
 
     <form @submit.prevent="updatePassword">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-4/12 px-4">
+            <div class="w-full px-4 lg:w-4/12">
                 <div class="relative w-full mb-3">
                     <label
-                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        class="block mb-2 text-xs font-bold uppercase text-blueGray-600"
                         for="current_password"
                     >
                         Current Password
@@ -52,15 +52,15 @@ const updatePassword = () => {
                         v-model="form.current_password"
                         type="password"
                         autocomplete="current-password"
-                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        class="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     />
                     <InputError :message="form.errors.current_password"/>
                 </div>
             </div>
-            <div class="w-full lg:w-4/12 px-4">
+            <div class="w-full px-4 lg:w-4/12">
                 <div class="relative w-full mb-3">
                     <label
-                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        class="block mb-2 text-xs font-bold uppercase text-blueGray-600"
                         for="password"
                     >
                         New Password
@@ -71,15 +71,15 @@ const updatePassword = () => {
                         v-model="form.password"
                         type="password"
                         autocomplete="new-password"
-                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        class="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     />
                     <InputError :message="form.errors.password"/>
                 </div>
             </div>
-            <div class="w-full lg:w-4/12 px-4">
+            <div class="w-full px-4 lg:w-4/12">
                 <div class="relative w-full mb-3">
                     <label
-                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        class="block mb-2 text-xs font-bold uppercase text-blueGray-600"
                         for="password_confirmation"
                     >
                         Confirm Password
@@ -89,16 +89,16 @@ const updatePassword = () => {
                         v-model="form.password_confirmation"
                         type="password"
                         autocomplete="new-password"
-                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        class="w-full px-3 py-3 text-sm transition-all duration-150 ease-linear bg-white border-0 rounded shadow placeholder-blueGray-300 text-blueGray-600 focus:outline-none focus:ring"
                     />
                     <InputError :message="form.errors.password_confirmation"/>
                 </div>
             </div>
 
-            <div class="w-full px-4 flex justify-end">
+            <div class="flex justify-end w-full px-4">
                 <SubmitButton
                     :processing="form.processing"
-                    class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                    class="px-4 py-2 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-emerald-500 active:bg-emerald-600 hover:shadow-md focus:outline-none"
                 >
                     Save
                     <Transition

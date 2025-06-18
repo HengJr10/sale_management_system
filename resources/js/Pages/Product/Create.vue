@@ -66,11 +66,11 @@ const createProduct = () => {
 
         <div class="flex flex-wrap">
             <div class="w-full px-4">
-                <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-white">
-                    <div class="rounded-t mb-3 px-4 py-3 border-0">
+                <div class="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded shadow-lg">
+                    <div class="px-4 py-3 mb-3 border-0 rounded-t">
                         <div class="flex flex-wrap items-center">
-                            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                                <div class="flex justify-between items-center">
+                            <div class="relative flex-1 flex-grow w-full max-w-full px-4">
+                                <div class="flex items-center justify-between">
                                     <h4 class="text-2xl">Create Product</h4>
                                     <Button
                                         :href="route('products.index')"
@@ -82,10 +82,10 @@ const createProduct = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="block w-full overflow-x-auto px-8 py-4">
+                    <div class="block w-full px-8 py-4 overflow-x-auto">
                         <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
                             <div class="flex flex-col">
-                                <label for="category" class="text-stone-600 text-sm font-medium">Select Category</label>
+                                <label for="category" class="text-sm font-medium text-stone-600">Select Category</label>
                                 <AsyncVueSelect
                                     v-model="form.category_id"
                                     resource="categories.index"
@@ -95,7 +95,7 @@ const createProduct = () => {
                                 <InputError :message="form.errors.category_id"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="supplier" class="text-stone-600 text-sm font-medium">Select Supplier</label>
+                                <label for="supplier" class="text-sm font-medium text-stone-600">Select Supplier</label>
                                 <AsyncVueSelect
                                     v-model="form.supplier_id"
                                     resource="suppliers.index"
@@ -105,7 +105,7 @@ const createProduct = () => {
                                 <InputError :message="form.errors.supplier_id"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="name" class="text-stone-600 text-sm font-medium">Name</label>
+                                <label for="name" class="text-sm font-medium text-stone-600">Name</label>
                                 <input
                                     id="name"
                                     ref="nameInput"
@@ -113,78 +113,78 @@ const createProduct = () => {
                                     @keyup.enter="createProduct"
                                     type="text"
                                     placeholder="Enter name"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.name"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="product_code" class="text-stone-600 text-sm font-medium">Product Code</label>
+                                <label for="product_code" class="text-sm font-medium text-stone-600">Product Code</label>
                                 <input
                                     id="product_code"
                                     v-model="form.product_code"
                                     @keyup.enter="createProduct"
                                     type="text"
                                     placeholder="Enter product code"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.product_code"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="root" class="text-stone-600 text-sm font-medium">Root</label>
+                                <label for="root" class="text-sm font-medium text-stone-600">Root</label>
                                 <input
                                     id="root"
                                     v-model="form.root"
                                     @keyup.enter="createProduct"
                                     type="text"
                                     placeholder="Enter root"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.root"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="buying_date" class="text-stone-600 text-sm font-medium">Buying Date</label>
+                                <label for="buying_date" class="text-sm font-medium text-stone-600">Buying Date</label>
                                 <input
                                     id="buying_date"
                                     v-model="form.buying_date"
                                     @keyup.enter="createProduct"
                                     type="date"
                                     placeholder="Enter buying date"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.buying_date"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="buying_price" class="text-stone-600 text-sm font-medium">Buying Price</label>
+                                <label for="buying_price" class="text-sm font-medium text-stone-600">Buying Price</label>
                                 <input
                                     id="buying_price"
                                     v-model="form.buying_price"
                                     @keyup.enter="createProduct"
                                     type="number"
                                     placeholder="Enter buying price"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.buying_price"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="selling_price" class="text-stone-600 text-sm font-medium">Selling Price</label>
+                                <label for="selling_price" class="text-sm font-medium text-stone-600">Selling Price</label>
                                 <input
                                     id="selling_price"
                                     v-model="form.selling_price"
                                     @keyup.enter="createProduct"
                                     type="number"
                                     placeholder="Enter selling price"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 />
                                 <InputError :message="form.errors.selling_price"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="quantity" class="text-stone-600 text-sm font-medium">Quantity</label>
+                                <label for="quantity" class="text-sm font-medium text-stone-600">Quantity</label>
                                 <div class="flex mt-1">
                                     <AsyncVueSelect
                                         v-model="form.unit_type_id"
                                         resource="unit-types.index"
                                         placeholder="Select unit type"
-                                        class="w-1/2 rounded-l-md bg-gray-300 border-none outline-none focus:outline-none"
+                                        class="w-1/2 bg-gray-300 border-none outline-none rounded-l-md focus:outline-none"
                                     />
                                     <input
                                         id="quantity"
@@ -192,18 +192,18 @@ const createProduct = () => {
                                         @keyup.enter="createProduct"
                                         type="number"
                                         placeholder="Enter quantity"
-                                        class="w-full rounded-r-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                        class="w-full px-2 py-2 border border-gray-200 shadow-sm outline-none rounded-r-md focus:outline-none focus:shadow-outline"
                                     />
                                 </div>
                                 <InputError :message="form.errors.unit_type_id"/>
                                 <InputError :message="form.errors.quantity"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="status" class="text-stone-600 text-sm font-medium">Status</label>
+                                <label for="status" class="text-sm font-medium text-stone-600">Status</label>
                                 <select
                                     id="status"
                                     v-model="form.status"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 >
                                     <option value="active">Active</option>
                                     <option value="inactive">Inactive</option>
@@ -216,7 +216,7 @@ const createProduct = () => {
                                         @click="fileInput.click()"
                                         :alt="$page.props.auth.user.name"
                                         :src="previewImage || default_image"
-                                        class="shadow-xl h-auto align-middle border-none absolute max-w-150-px"
+                                        class="absolute h-auto align-middle border-none shadow-xl max-w-150-px"
                                         style="max-width: 400px !important; height: 150px !important;"
                                         title="Upload Photo"
                                     />
@@ -224,30 +224,30 @@ const createProduct = () => {
                                         v-if="isHovered"
                                         class="absolute flex items-center justify-center rounded-full"
                                     >
-                                        <i class="fas fa-camera text-black text-2xl"></i>
+                                        <i class="text-2xl text-black fas fa-camera"></i>
                                     </div>
                                     <input type="file" class="hidden" accept="image/*" ref="fileInput" @change="handleFileChange" />
                                 </div>
                                 <InputError :message="form.errors.photo"/>
                             </div>
                             <div class="flex flex-col">
-                                <label for="description" class="text-stone-600 text-sm font-medium">Description</label>
+                                <label for="description" class="text-sm font-medium text-stone-600">Description</label>
                                 <textarea
                                     id="description"
                                     v-model="form.description"
                                     type="text"
                                     rows="3"
                                     placeholder="Enter description"
-                                    class="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:outline-none focus:shadow-outline"
+                                    class="block w-full px-2 py-2 mt-2 border border-gray-200 rounded-md shadow-sm outline-none focus:outline-none focus:shadow-outline"
                                 ></textarea>
                                 <InputError :message="form.errors.description"/>
                             </div>
                         </div>
-                        <div class="my-6 flex justify-end">
+                        <div class="flex justify-end my-6">
                             <SubmitButton
                                 :processing="form.processing"
                                 @click="createProduct"
-                                class="text-white bg-emerald-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+                                class="px-4 py-2 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-emerald-600 hover:shadow-lg focus:outline-none"
                             >
                                 Submit
                             </SubmitButton>

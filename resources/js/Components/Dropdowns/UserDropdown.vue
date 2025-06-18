@@ -1,18 +1,18 @@
 <template>
     <div>
         <a
-            class="text-blueGray-500 block"
+            class="block text-blueGray-500"
             href="#pablo"
             ref="btnDropdownRef"
             v-on:click="toggleDropdown($event)"
         >
-            <div class="items-center flex">
+            <div class="flex items-center">
         <span
-            class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
+            class="inline-flex items-center justify-center w-12 h-12 text-sm text-white rounded-full bg-blueGray-200"
         >
           <img
               alt="..."
-              class="w-full rounded-full align-middle border-none shadow-lg"
+              class="w-full align-middle border-none rounded-full shadow-lg"
               :src="$page.props.auth.user.photo"
           />
         </span>
@@ -20,7 +20,7 @@
         </a>
         <div
             ref="popoverDropdownRef"
-            class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+            class="z-50 float-left py-2 text-base text-left list-none bg-white rounded shadow-lg min-w-48"
             v-bind:class="{
         hidden: !dropdownPopoverShow,
         block: dropdownPopoverShow,
@@ -28,14 +28,14 @@
         >
             <Link
                 :href="route('profile.edit')"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                class="block w-full px-4 py-2 text-sm font-normal bg-transparent whitespace-nowrap text-blueGray-700"
             >
                 Profile
             </Link>
             <Link
                 :href="route('logout')"
                 method="post"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                class="block w-full px-4 py-2 text-sm font-normal bg-transparent whitespace-nowrap text-blueGray-700"
             >
                 Logout
             </Link>

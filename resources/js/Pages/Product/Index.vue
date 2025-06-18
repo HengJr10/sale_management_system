@@ -41,7 +41,7 @@ const deleteProductModal = (product) => {
 const deleteProduct = () => {
     form.delete(route('products.destroy', selectedProduct.value.id), {
         preserveScroll: true,
-        onSuccess: () => {
+        onSuccess: () => {  
             closeModal();
             showToast();
         },
@@ -50,7 +50,7 @@ const deleteProduct = () => {
 
 const closeModal = () => {
     showCreateModal.value = false;
-    showEditModal.value = false;
+    showEditModal.value = false;    
     showDeleteModal.value = false;
     form.reset();
 };
